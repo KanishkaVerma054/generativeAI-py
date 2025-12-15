@@ -1,6 +1,5 @@
 import os
 from typing import Optional
-from openai._utils import parse_date
 import requests
 from dotenv import load_dotenv
 from openai import OpenAI
@@ -122,7 +121,6 @@ while True:
             )})
             continue
             
-
         if parsed_result.step == "PLAN":
             print("🧠", parsed_result.content)
             continue
