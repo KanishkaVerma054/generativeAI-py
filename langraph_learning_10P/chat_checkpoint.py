@@ -52,6 +52,6 @@ with MongoDBSaver.from_conn_string(os.getenv("DB_URI")) as checkpointer:
     for chunk in graph_with_checkpointer.stream(
         State({"messages": ["You know that I am learning langgraph"]}),
         config,
-        stream_mode="values"
+        stream_mode="values",
     ):
         chunk["messages"][-1].pretty_print()
